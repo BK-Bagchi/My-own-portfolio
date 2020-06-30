@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiptoD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@1&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Portfolio.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">DiptoD</label>
+        <ul>
+            <li class="inVi"><a href="#">Home</a></li>
+            <li class="inVi"><a href="#">About</a></li>
+            <li class="hide h1"><a href="#">Services</a></li>
+            <li class="hide h2"><a href="#">Contact</a></li>
+            <li class="hide h3"><a href="#">Feedback</a></li>
+            <li class="disPlay"><a href="#">More</a>
+                <ul>
+                    <li class="show s1"><a href="#">Services</a></li>
+                    <li class="show s2"><a href="#">Contact</a></li>
+                    <li class="show s3"><a href="#">Feedback</a></li>
+                </ul>
+            </li>
+            <li class="menu"><a href="#">MENU</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Feedback</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="contain item1">
+            <img src="Me.jpg" alt="My Cover Photo" title="My Cover Photo" class="image">
+        </div>
+        <div class="contain item2">
+            <div class="text">
+                <h3>Hello there</h3>
+                <h2>I am 
+<label>Balay Kumar Bahchi</label></h2>
+                <h3>Welcome to my website</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive,'Dancing Script', cursive;
+}
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 0 0 100px;
+    font-weight: bold;
+}
+nav{
+    background: linear-gradient(to bottom right, skyblue,#0082e6,#0082e6, skyblue);
+    height: 10vh;
+    min-height: 79px;
+    width: 100%;
+}
+nav ul{
+    float: right;
+    margin-right: 15px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+
+}
+nav ul li a{
+    color:white; /*color*/
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    padding: 8px 5px;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+    right: 0%;
+    background: #0082e6;
+    border-radius: 3px;
+    /* border-bottom: 5 solid red; */
+    box-shadow: 2px 2px 5px #000, 2px -2px 5px #000;
+}
+nav ul ul li{
+    display: block;
+    line-height: 30px;
+    margin: 0px 7px 3px 7px;
+    padding: 3px 17px;
+    border-bottom: 1px solid white;
+    text-align: center;
+}
+nav ul li:hover>ul{
+    display: block;
+}
+nav a:hover{
+    background: #1b9bff;
+    box-shadow: 1px 1px 2px #000, 1px -1px 2px #000;
+    transition: 0.2s;
+}
+.disPlay{
+    display: inline-block;
+}
+.hide{
+    display: none;
+}    
+.show{
+    display: block;
+}
+.menu{
+    display: none;
+}
+
+
+
+
+.container{
+    width: 100%; 
+    height: 90vh; 
+    min-height: 680px;
+    background: linear-gradient(to right bottom, #636e72 20%, #2d3436 80%);
+}
+.container .item1{
+    float: left;
+    height: 100%;
+    width: 50%;
+    /* background-color: blue; */
+    overflow: hidden;
+   /* display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    z-index: 1; */
+}
+.container .item1 .image{
+    height: 100%;
+    width: 100%;
+}
+.container .item2{
+    float: left;
+    height: 100%;
+    width: 50%;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    z-index: 1;
+}
+.container .img{
+    height: 100%;
+    width: 50%;
+    /* float: left; */
+    z-index: 0;
+}
+
+.container .contain .text{
+    text-align: center;
+    color: #b2bec3;
+    z-index: 1;
+}
+.container .contain .text label{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.container .contain .text{
+    white-space: pre;
+}
+
+
+
+
+
+@media only screen and (max-width: 500px) {
+    .disPlay,.inVi{display: none;}
+    label.logo{padding: 0 0 0 70px;}
+    .menu{display: inline-block;}
+}
+
+@media only screen and (min-width: 545px) {
+    .disPlay {display: inline-block;}
+    .h1{display: none;}
+}
+
+@media only screen and (min-width: 640px) {
+    .disPlay {display: inline-block;}
+    .h1{display: inline-block;}
+    .s1{display: none;}
+}
+
+@media only screen and (min-width: 770px) {
+    .disPlay {display: none;}
+    .hide{display: inline-block;}
+}
+
+@media only screen and (min-width: 820px) {
+    
+}
+
+@media only screen and (min-width: 960px) {
+    .container .contain .text{white-space: normal;}
+}
